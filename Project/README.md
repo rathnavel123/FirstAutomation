@@ -20,6 +20,6 @@ This Python script synchronizes DICOM files between a main folder and a source f
 - `smtplib` (for sending emails)
 - `email` (for constructing email messages)
 
-Acknowledgements
+## Acknowledgements
 
   - **Python Libraries**: `shutil`, `os`, `re`, `schedule`, `time`,`smtplib`, `email`.
