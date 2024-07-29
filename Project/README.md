@@ -22,4 +22,4 @@ This Python script synchronizes DICOM files between a main folder and a source f
 
 Acknowledgements
 
-  - **Python Libraries**: shutil, os, re, schedule, time, smtplib, email.
+  - **Python Libraries**: `shutil`, `os`, `re`, `schedule`, `time`,`smtplib`, `email`.
