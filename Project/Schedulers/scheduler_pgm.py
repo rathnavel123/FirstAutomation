@@ -23,7 +23,7 @@ base_source_path = r"E:\Autobackup\classwise"
 base_main_path = r"E:\Autobackup\classwise"
 
 #previous day's date
-previous_date = datetime.now() - timedelta(days=1)
+previous_date = datetime.now() - timedelta(days=1) #this is for one day previous 
 day_month_year = f"{previous_date.day:02d}-{previous_date.month:02d}-{previous_date.year:04d}"
 day_month = f"{previous_date.day:02d}{previous_date.month:02d}"
 
@@ -44,6 +44,18 @@ def Automatic():
     '''
     for source_folder, main_folder in zip(source_folders, main_folders):
         print("Program Started inside the Automatic")
+
+        #this below lines will skip the missed folder and eecute
+        if not os.path.exists(source_folder):
+            print(f"Skipping missing source folder: {source_folder}")
+            continue
+
+        if not os.path.exists(main_folder):
+            print(f"Skipping missing main folder: {main_folder}")
+            continue
+        folder = os.listdir(source_folder)
+        next_folder = os.listdir(main_folder)
+        #List the folder
         folder = os.listdir(source_folder)
         next_folder = os.listdir(main_folder)
 
